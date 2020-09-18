@@ -14,7 +14,7 @@
     "build": "npm run build:vue && npm run build:ele && electron-builder"
   },
   "build": {
-    "appId": "757271842@qq.com",
+    "appId": "xxx@gmail.com",
     "files": [
       "!node_modules",
       "dist/**"
