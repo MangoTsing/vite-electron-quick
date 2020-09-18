@@ -1369,8 +1369,8 @@ electron-publish@22.8.0:
 
 electron-store@^6.0.0:
   version "6.0.0"
-  resolved "https://registry.npm.taobao.org/electron-store/download/electron-store-6.0.0.tgz#92a5f8295a326f074281ae0d6a307454e6f68243"
-  integrity sha1-kqX4KVoybwdCga4NajB0VOb2gkM=
+  resolved "https://registry.yarnpkg.com/electron-store/-/electron-store-6.0.0.tgz#92a5f8295a326f074281ae0d6a307454e6f68243"
+  integrity sha512-ujb0a/6gxMxb9vOQ2BjOehK9VCyq5OKvttekd9v/tohA9oBHnAdV+Vxu4eoRh+/F9ShPFhcvDZkMdqO5i+TXUw==
   dependencies:
     conf "^7.1.1"
     type-fest "^0.16.0"

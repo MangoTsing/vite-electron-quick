@@ -18,6 +18,9 @@ const config: UserConfig = {
     // 别名必须以 / 开头、结尾
     '/@/': root,
   },
+  rollupInputOptions: {
+    external: ''
+  },
   cssPreprocessOptions: {
     sass: {
       modifyVars: {
