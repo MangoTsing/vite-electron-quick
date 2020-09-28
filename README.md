@@ -1,9 +1,24 @@
 # vite-electron-quick
 Simple Vite Vue3 and Electron 10.x quick template.
 
+## quick install
+
+```
+
+npx create-vite-electron <project_name>
+
+or
+
+yarn create vite-electron <project_name>
+
+```
+
 ## run
+
 - yarn
+
 - yarn dev
+
 - yarn build
 
 ## 原因
