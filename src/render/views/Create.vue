@@ -1,3 +1,3 @@
 <template>
-    <div>创建</div>
+    <router-link to="/">返回首页</router-link>
 </template>

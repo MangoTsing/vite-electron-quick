@@ -9,6 +9,7 @@
   </div>
   <p>count: {{state.count}}</p>
   <p>double: {{state.double}}</p>
+  <router-link to="/create">创建-路由</router-link>
 </template>
 
 <script>
