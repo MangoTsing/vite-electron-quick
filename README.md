@@ -28,16 +28,17 @@ npx create-vite-electron <project_name>
 ## 关于 electron-store
 - 在使用 electron 10.x 版本以上时，会出现 `app is not defined` 问题，需要在创建窗口时增加如下配置：
 
-## 使用 element-plus tips
-
-- 因为是一个比较常见的框架，目前测试时发现 element-plus 框架和 vite 本身不能很好兼容，会导致热更新渲染失效的问题
-- 不排除其他第三方框架会与 vite 造成同样问题，存在使用风险
-
 ```
 webPreferences: {
     enableRemoteModule: true,
 },
 ```
+
+## 使用 element-plus tips
+
+- 因为是一个比较常见的框架，目前测试时发现 element-plus 框架和 vite 本身不能很好兼容，会导致热更新渲染失效的问题
+- 不排除其他第三方框架会与 vite 造成同样问题，存在使用风险
+
 
 ---
 
