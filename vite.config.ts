@@ -21,6 +21,21 @@ const config: UserConfig = {
   rollupInputOptions: {
     external: ''
   },
+  optimizeDeps: {
+    allowNodeBuiltins: [ // 允许 Vite Node 内置模块
+      'electron-is-dev',
+      'electron-store',
+      'vite-electron', // package.json name 字段
+      'electron',
+      'conf',
+      'atomically',
+      'env-paths',
+      'find-up',
+      'make-dir',
+      'locate-path',
+      'path-exists'
+    ]
+  },
   cssPreprocessOptions: {
     sass: {
       modifyVars: {

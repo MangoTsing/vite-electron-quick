@@ -17,6 +17,12 @@ npx create-vite-electron <project_name>
 
 - yarn build
 
+## change log
+
+- vite update 1.0.0 rc.6, update `vite.config.ts` file
+- add third lib `element-plus` import globally
+- please note when using **NODE MODULE**, may need to change `vite.config.ts -> optimizeDeps.allowNodeBuiltins`
+
 ## 原因
 - vite 处于 beta 状态，目前还没有适合的脚手架与 electron 10.x 版本搭配使用
 - 业务上原本使用的 electron-vue 框架，由于使用的 electron 以及 webpack 版本较低，升级很麻烦。于是计划使用新的方案探索可能性。
@@ -36,9 +42,8 @@ webPreferences: {
 
 ## 使用 element-plus tips
 
-- 因为是一个比较常见的框架，目前测试时发现 element-plus 框架和 vite 本身不能很好兼容，会导致热更新渲染失效的问题
-- 不排除其他第三方框架会与 vite 造成同样问题，存在使用风险
-
+- vite 请升级到 1.0.0 rc.5 以上版本，否则会造成热更新异常等问题
+- **第三方库都可能会与 vite 以及 electron 框架本身造成冲突，请谨慎选择。**
 
 ---
 

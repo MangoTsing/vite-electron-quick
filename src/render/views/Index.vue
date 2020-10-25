@@ -5,11 +5,11 @@
   <Helo :msg="`Electron ${ state.version }`" />
   <Helo msg="Vue 3.0 + Vite" />
   <div>
-    <button class="success" @click="increment">点我</button>
+    <el-button style="width: 60%;" @click="increment">点我</el-button>
   </div>
   <p>count: {{state.count}}</p>
   <p>double: {{state.double}}</p>
-  <router-link to="/create">创建-路由</router-link>
+  <router-link class="success" to="/create">跳转路由</router-link>
 </template>
 
 <script>
@@ -51,6 +51,7 @@ export default {
   border-radius: 10px;
   padding: 10px 80px;
   color: #fff;
+  text-decoration: none;
 }
 </style>
 
