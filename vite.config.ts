@@ -22,18 +22,10 @@ const config: UserConfig = {
     external: ''
   },
   optimizeDeps: {
-    allowNodeBuiltins: [ // 允许 Vite Node 内置模块
+    auto: true,
+    exclude: [
       'electron-is-dev',
       'electron-store',
-      'vite-electron', // package.json name 字段
-      'electron',
-      'conf',
-      'atomically',
-      'env-paths',
-      'find-up',
-      'make-dir',
-      'locate-path',
-      'path-exists'
     ]
   },
   cssPreprocessOptions: {
