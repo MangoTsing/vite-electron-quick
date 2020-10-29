@@ -15,6 +15,9 @@
   },
   "build": {
     "appId": "xxx@gmail.com",
+    "electronDownload":{
+      // "mirror":"https://npm.taobao.org/mirrors/electron/" // if build slowly, you can use electron mirror
+    },
     "files": [
       "!node_modules",
       "dist/**"
