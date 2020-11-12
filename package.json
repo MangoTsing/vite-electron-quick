@@ -15,8 +15,8 @@
   },
   "build": {
     "appId": "xxx@gmail.com",
-    "electronDownload":{
-      "mirror":"https://npm.taobao.org/mirrors/electron/"
+    "electronDownload": {
+      "mirror": "https://npm.taobao.org/mirrors/electron/"
     },
     "files": [
       "!node_modules",
@@ -70,7 +70,7 @@
     "rollup-plugin-esbuild": "^2.4.2",
     "sass": "^1.26.10",
     "typescript": "^3.9.7",
-    "vite": "^1.0.0",
+    "vite": "^1.0.0-rc.9",
     "wait-on": "^5.2.0"
   },
   "keywords": [
