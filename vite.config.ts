@@ -16,6 +16,10 @@ const config: UserConfig = {
     // 别名必须以 / 开头、结尾
     '/@': root,
   },
+  build: {
+    base: '.',
+    outDir: join('../../dist/render')
+  },
   server: {
     port: +process.env.PORT,
   },
