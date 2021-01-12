@@ -1,5 +1,5 @@
 # vite-electron-quick
-A fast Simple Vite2 Vue3 and Electron 11.x template.
+👻 A fast Simple Vite2 Vue3 and Electron 11.x template.
 
 ⚡️ If you want to **fast** create a `Vite 2 + Vue 3 + Electron 11.x` project:
 
