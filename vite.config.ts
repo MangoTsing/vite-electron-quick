@@ -1,6 +1,5 @@
 /**
- * 参考链接: https://github.com/vitejs/vite/blob/master/src/node/config.ts
- * 直接 cmd+左键 点进配置项查看即可
+ * 参考链接: https://vitejs.dev/config/
  */
 import { join } from 'path'
 import { UserConfig } from 'vite'
@@ -13,12 +12,12 @@ const root = join(__dirname, 'src/render')
 const config: UserConfig = {
   root,
   alias: {
-    // 别名必须以 / 开头、结尾
     '/@': root,
   },
   build: {
     base: '.',
-    outDir: join('../../dist/render')
+    outDir: join('../../dist/render'),
+    emptyOutDir: true
   },
   server: {
     port: +process.env.PORT,
