@@ -14,8 +14,8 @@ const config: UserConfig = {
   alias: {
     '/@': root,
   },
+  base: './',
   build: {
-    base: '.',
     outDir: join('../../dist/render'),
     emptyOutDir: true
   },
