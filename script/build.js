@@ -34,7 +34,7 @@ const watchFunc = function () {
     });
 }
 
-const resource = `http://localhost:${process.env.PORT}`;
+const resource = `tcp:localhost:${process.env.PORT}`;
 
 if (argv.watch) {
   waitOn({
