@@ -10,21 +10,14 @@ const waitOn = require('wait-on');
 const electron = require('electron-connect').server.create({ stopOnClose: true });
 require('dotenv').config({ path: path.join(__dirname, '../.env') })
 const options = require('./rollup.config');
+const net = require('net');
+const { URL } = require('url');
 
 const opt = options(argv.env);
 const TAG = '[script/build.js]';
 const spinner = ora(`${TAG} Electron build...`);
 
-if (argv.watch) {
-  waitOn({
-    resources: [`http://localhost:${process.env.PORT}`],
-    log: false,
-  }, err => {
-    if (err) {
-      console.log(err);
-      process.exit(1);
-    }
-
+const watchFunc = function () {
     // once here, all resources are available
     const watcher = rollup.watch(opt);
     watcher.on('change', filename => {
@@ -39,6 +32,28 @@ if (argv.watch) {
         console.log(ev.error)
       }
     });
+}
+
+const resource = `http://localhost:${process.env.PORT}`;
+
+if (argv.watch) {
+  waitOn({
+    resources: [resource],
+    log: false,
+    timeout: 5000,
+  }, err => {
+    if (err) {
+        const { port, hostname } = new URL(resource);
+        const serverSocket = net.connect(port || 80, hostname, () => {
+          watchFunc();
+        });
+        serverSocket.on('error', (e) => {
+          console.log(err);
+          process.exit(1);
+        });
+    } else {
+      watchFunc();
+    }
   });
 } else {
   spinner.start();
