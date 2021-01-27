@@ -34,7 +34,7 @@ const watchFunc = function () {
     });
 }
 
-const resource = `http://localhost:${process.env.PORT}/index.html`;
+const resource = `http://localhost:${process.env.PORT}/index.html`; // 因为 vite 不会重定向到 index.html，所以直接写 index.html 路由。
 
 if (argv.watch) {
   waitOn({
