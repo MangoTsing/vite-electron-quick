@@ -25,7 +25,14 @@ yarn create vite-electron <project_name>
 
 ## change log
 
-#### 211113
+#### 210219
+- resolve #6
+- change vite config file (alias => resolve.alias)
+- current version: 
+    - vite 2.0.1
+    - electron 11.2.3
+
+#### 210113
 - fix Vite2 config bugs
 - vue-router next use `hash mode` instead of `history mode`
 

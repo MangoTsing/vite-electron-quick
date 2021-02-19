@@ -11,8 +11,10 @@ const root = join(__dirname, 'src/render')
 
 const config: UserConfig = {
   root,
-  alias: {
-    '/@': root,
+  resolve: {
+    alias: {
+      '/@': root,
+    }
   },
   base: './',
   build: {
