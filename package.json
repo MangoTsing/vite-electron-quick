@@ -50,7 +50,7 @@
   "dependencies": {
     "electron-is-dev": "^1.2.0",
     "electron-store": "^6.0.0",
-    "element-plus": "^latest",
+    "element-plus": "latest",
     "vue": "^3.0.5",
     "vue-router": "^4.0.0-beta.13"
   },
