@@ -28,7 +28,6 @@ const config: UserConfig = {
     vue()
   ],
   optimizeDeps: {
-    auto: true,
     exclude: [
       'electron-is-dev',
       'electron-store',
