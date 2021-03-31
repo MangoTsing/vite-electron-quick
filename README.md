@@ -25,6 +25,8 @@ yarn create vite-electron <project_name>
 
 ## change log
 
+#### 210331
+- Update `rollup-plugin-esbuild` version.
 #### 210219
 - resolve #6
 - change vite config file (alias => resolve.alias)
