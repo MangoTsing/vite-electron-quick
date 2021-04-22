@@ -12,32 +12,40 @@
   <router-link class="success" to="/create">跳转路由</router-link>
 </template>
 
-<script>
+<script lang="ts">
 import Helo from '../components/HelloWorld.vue'
-import { reactive, computed } from 'vue'
+import { reactive, computed, ComputedRef } from 'vue'
 const version = require('process').versions.electron
-export default {
-  name: 'Index',
-  components: {
-    Helo
-  },
-  setup() {
-    const state = reactive({
-      count: 0,
-      double: computed(() => state.count * 2),
-      version: version
-    })
+import { defineComponent } from 'vue'
 
-    function increment() {
-      state.count++
-    }
-
-    return {
-      state,
-      increment,
-    }
-  },
+interface State {
+  count: number,
+  double: ComputedRef<number> | number,
+  version: string
 }
+
+export default defineComponent({
+	name: "Index",
+	components: {
+		Helo
+	},
+	setup() {
+		const state: State = reactive({
+			count: 0,
+			double: computed(() => state.count * 2),
+			version: version
+		} as State)
+
+		function increment() {
+			state.count++
+		}
+
+		return {
+			state,
+			increment,
+		}
+	},
+})
 </script>
 
 <style lang="scss" scoped>
