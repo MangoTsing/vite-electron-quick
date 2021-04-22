@@ -14,9 +14,15 @@
 
 <script lang="ts">
 import Helo from '../components/HelloWorld.vue'
-import { reactive, computed } from 'vue'
+import { reactive, computed, ComputedRef } from 'vue'
 const version = require('process').versions.electron
 import { defineComponent } from 'vue'
+
+interface State {
+  count: number,
+  double: ComputedRef<number> | number,
+  version: string
+}
 
 export default defineComponent({
 	name: "Index",
@@ -24,11 +30,11 @@ export default defineComponent({
 		Helo
 	},
 	setup() {
-		const state: any = reactive({
+		const state: State = reactive({
 			count: 0,
 			double: computed(() => state.count * 2),
 			version: version
-		})
+		} as State)
 
 		function increment() {
 			state.count++
