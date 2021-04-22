@@ -1,13 +1,16 @@
 <template>
   <router-view></router-view>
 </template>
-<script lang='ts'>
+
+<script lang="ts">
 import { useRouter } from 'vue-router'
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   name: 'app',
   setup() {
     const router = useRouter()
     router.push('/')
-  }
-}
+  },
+})
 </script>
