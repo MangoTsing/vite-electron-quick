@@ -32,8 +32,11 @@ class createWin {
       webPreferences: {
         nodeIntegration: true,
         enableRemoteModule: true,
+        contextIsolation: false
       },
     })
+
+    win.webContents.openDevTools();
   
     const URL = is_dev
       ? `http://localhost:${process.env.PORT}` // vite 启动的服务器地址
